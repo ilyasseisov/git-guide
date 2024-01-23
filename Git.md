@@ -38,3 +38,7 @@ cat ~/.gitconfig
 
 - commits files to local repo
 - ex: git commit -m 'Initial commit'
+
+### git log
+
+- to history of changes
