@@ -42,3 +42,10 @@ cat ~/.gitconfig
 ### git log
 
 - to history of changes
+
+## create SSH key
+
+- navigate to home dir - _cd ~_
+- check the presence of SSH keys - _ls -la .ssh/_
+- generate SSH key - _ssh-keygen -t ed25519 -C "mygithubemail@gmail.com"_
+- check the presence of SSH keys - _ls -la .ssh/_
