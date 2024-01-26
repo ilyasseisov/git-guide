@@ -97,3 +97,41 @@ cat ~/.gitconfig
 2. tracked - already added and commited
 3. staged - in staging area (after git add command)
 4. modified - commited and changed
+
+## Commit messages
+
+- concise and informative
+- conventional commits: https://www.conventionalcommits.org/en/v1.0.0/
+- ex (corporate): "LGS-239: Add new numbers to the list A1"
+- ex (conventional): "feat: add total number of week orders"
+- ex (Github style): "Edit #334, add temprature chart"
+
+## How to edit commit
+
+### Edit the last commit
+
+- git commit --amend --no-edit
+- "--amend" flag tells git to update the last commit and not to create a new one
+- "--no-edit" flag tells git to leave the message as it is
+
+#### Explanation of the process
+
+Let's say we have two files _index.html_ and _style.css_ we have added and commited only _index.html_. Now to add _style.css_ to the last to commit we should:
+
+1. git add style.css
+2. git commit --amend --no-edit
+
+And changes can go and on.
+
+### Edit the last commit and its message
+
+- git commit --amend -m "New message"
+
+### Unstage files
+
+- git restore --staged <file>
+- git restore --staged .
+
+### Reset files back to <HASH>
+
+- git reset --hard <commit hash>
