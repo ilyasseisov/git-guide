@@ -132,6 +132,14 @@ And changes can go and on.
 - git restore --staged <file>
 - git restore --staged .
 
-### Reset files back to <HASH>
+### Reset repo back to <HASH>
 
 - git reset --hard <commit hash>
+
+### Undo file changes
+
+- git restore <file>
+
+### git diff
+
+- to see changes in modified files
