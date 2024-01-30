@@ -135,6 +135,7 @@ And changes can go and on.
 ### Reset repo back to <HASH>
 
 - git reset --hard <commit hash>
+- delete all changes from staging and work area till that commit
 
 ### Undo file changes
 
@@ -143,3 +144,52 @@ And changes can go and on.
 ### git diff
 
 - to see changes in modified files
+- git diff <HASH1> <HASH2>
+
+### gitignore
+
+- file to add files and dirs to not to track
+- _\*.jpeg_ - to ignore all _.jpeg_ files
+
+---
+
+### git clone
+
+- to clone repo from Github
+- ex: git clone git@github.com:yandex-praktikum/git-clone-lesson.git
+
+### fork
+
+- copy an existing Github repo to your account and then modify it
+
+## Branches
+
+### git branch
+
+- to see the list of all branches
+- _(\*)_ - a branch you are currently at
+
+### git branch <NAME>
+
+- to create a new branch
+
+#### branch naming rules
+
+- <KW>/<NAME>
+- ex: feature/add-animation-on-scroll
+- ex: bugfix/scroll-ios
+
+### git checkout <NAME>
+
+- to change the branch
+- ex: git checkout _bugfix/scroll-ios_
+
+#### commit navigation
+
+_~N_ - (N is a number). N is counted back from 0 (current commit).
+
+- HEAD or HEAD~0 is a current commit
+- HEAD~1 is a previous commit from a current one
+- HEAD~2 is second back commit from a current one
+
+- ex: git diff HEAD~2 HEAD will show a difference between current commit (HEAD) and second back (HEAD~2)
