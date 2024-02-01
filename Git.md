@@ -193,3 +193,29 @@ _~N_ - (N is a number). N is counted back from 0 (current commit).
 - HEAD~2 is second back commit from a current one
 
 - ex: git diff HEAD~2 HEAD will show a difference between current commit (HEAD) and second back (HEAD~2)
+
+### git branch -D <NAME>
+
+- to delete a branch
+
+### git merge
+
+- to merge a _feature_ or _bugfix_ branches with a _main_
+
+1. checkout to a main branch: `git checkout main`
+2. merge: git merge _feature/new-feature_
+
+#### conflict
+
+A conflict is a situation in which one or more people have modified the same file. At the same time, the results of such modifications are incompatible and only a human can figure out which of the variants is correct.
+
+In development, for example, conflicts most often arise when multiple programmers change code in the same place at the same time.
+
+##### How to resolve conflicts: general guidelines
+
+During merging, Git itself highlights files that it was unable to merge. To understand the situation, you need to do the following:
+
+1. Look in the file where the conflict occurred.
+2. Examine both sides of the conflict - your version and your colleague's version. Your task is to correctly merge the two versions into a final version, so that the changes of both sides are not lost. The new version will become the current up-to-date version.
+3. Manually remove or tweak irrelevant changes, if any.
+4. Prepare the changes for saving and commit.
