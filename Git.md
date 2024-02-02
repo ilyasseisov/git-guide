@@ -219,3 +219,47 @@ During merging, Git itself highlights files that it was unable to merge. To unde
 2. Examine both sides of the conflict - your version and your colleague's version. Your task is to correctly merge the two versions into a final version, so that the changes of both sides are not lost. The new version will become the current up-to-date version.
 3. Manually remove or tweak irrelevant changes, if any.
 4. Prepare the changes for saving and commit.
+
+### git push - send local branch to Github
+
+1. create a branch in a local repo
+2. do some commits
+3. git push -u origin <NAME>
+
+#### pull request
+
+In the world of software development, a pull request is a way for one person to suggest changes to a codebase and ask another person to review and merge those changes into the main code.
+
+It helps ensure that everyone on the team is on the same page and that the changes are high-quality and won't cause any issues in the project. It's like a way of collaborating and making sure everything runs smoothly!
+
+##### PR algo
+
+1. You work on a task in your branch - for example, you write code for new functionality.
+2. You finish your work, and then create a pull-request.
+3. Your colleagues check that the code looks neat and concise and that the program works correctly; they also leave comments. This process is called code review.
+4. After the final approval, you upload your branch to the main one.
+
+##### Workflow in teams
+
+1. git clone <URL>
+2. git branch feature-1
+3. git checkout feature-1
+4. do some commits
+5. git push origin feature-1
+
+### git pull
+
+- to download changes from remote repo
+
+  Algo:
+
+1. checkout to _master_ branch
+2. git pull
+
+#### best practice: algo before PR
+
+1. git checkout master - checkout to master
+2. git pull - pull new changes to master
+3. git checkout my-branch - checkout to your branch
+4. git merge master - merge main into my-branch
+5. git push -u origin my-branch - push my-branch into remote repo
