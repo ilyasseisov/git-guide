@@ -245,7 +245,7 @@ It helps ensure that everyone on the team is on the same page and that the chang
 2. git branch feature-1
 3. git checkout feature-1
 4. do some commits
-5. git push origin feature-1
+5. git push -u origin feature-1
 
 ### git pull
 
@@ -263,3 +263,32 @@ It helps ensure that everyone on the team is on the same page and that the chang
 3. git checkout my-branch - checkout to your branch
 4. git merge master - merge main into my-branch
 5. git push -u origin my-branch - push my-branch into remote repo
+
+#### feature branch workflow
+
+In that flow work on every new feature/bugfix starts in a new branch. And the every branch is merged into main.
+
+#### collaboration workflow in companies
+
+1.1. clone project
+1.2. create a new branch
+1.3. work and make commits
+1.4. push that branch to remote origin
+1.5. create a PR
+
+2.1. review PR at Github
+2.2. add comments to things to change
+2.3. set status "Request changes"
+
+3.1. fix changes, commit and push
+3.2. leave a message at Github (note the commits' hash)
+
+4.1. check that all changes are correct
+4.2. set status "Approve"
+
+5.1. merge branch into main
+5.2. delete branch
+
+6.1. delete branch locally
+6.2. git checkout main
+6.3. git pull
