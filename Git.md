@@ -76,7 +76,7 @@ cat ~/.gitconfig
 
 ## HEAD
 
-- it's a file that displays the last commit
+- it's a file that displays the last commit on the branch
 
 ### how to use
 
@@ -172,6 +172,8 @@ And changes can go and on.
 ### git branch <NAME>
 
 - to create a new branch
+- git checkout -b feature-branch development
+  (This will create a new branch named _feature-branch_ and switch to it, based on the _development_ branch.)
 
 #### branch naming rules
 
@@ -184,6 +186,10 @@ And changes can go and on.
 - to change the branch
 - ex: git checkout _bugfix/scroll-ios_
 
+### git checkout to create local versions of remote branches
+
+- sometimes after cloning a repo you see only main branch, to recreate other branches use _git checkout feature/one_
+
 #### commit navigation
 
 _~N_ - (N is a number). N is counted back from 0 (current commit).
@@ -193,8 +199,9 @@ _~N_ - (N is a number). N is counted back from 0 (current commit).
 - HEAD~2 is second back commit from a current one
 
 - ex: git diff HEAD~2 HEAD will show a difference between current commit (HEAD) and second back (HEAD~2)
+- ex: git diff master master~1
 
-### git branch -D <NAME>
+### git branch -d <NAME>
 
 - to delete a branch
 
