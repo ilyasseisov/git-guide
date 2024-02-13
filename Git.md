@@ -231,7 +231,7 @@ During merging, Git itself highlights files that it was unable to merge. To unde
 
 1. create a branch in a local repo
 2. do some commits
-3. git push -u origin <NAME>
+3. git push -u origin <BRANCH_NAME>
 
 #### pull request
 
@@ -278,10 +278,16 @@ In that flow work on every new feature/bugfix starts in a new branch. And the ev
 #### collaboration workflow in companies
 
 1.1. clone project
-1.2. create a new branch
-1.3. work and make commits
-1.4. push that branch to remote origin
-1.5. create a PR
+1.2. create a new branch (_feature-new_)
+1.3. check current status of a project
+
+Before starting work each day, it's a good practice to ensure your local repository is up-to-date with the latest changes from the remote repository.
+
+Run _git pull origin develop_ (assuming the main development branch is named _develop_). This command fetches changes from the remote _develop_ branch and merges them into your current local branch (_feature-new_).
+
+1.4. work and make commits
+1.5. push that branch to remote origin
+1.6. create a PR
 
 2.1. review PR at Github
 2.2. add comments to things to change
@@ -299,3 +305,7 @@ In that flow work on every new feature/bugfix starts in a new branch. And the ev
 6.1. delete branch locally
 6.2. git checkout main
 6.3. git pull
+
+### Git commands visualization
+
+https://dev.to/lydiahallie/cs-visualized-useful-git-commands-37p1
