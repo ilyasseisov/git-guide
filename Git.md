@@ -258,7 +258,9 @@ It helps ensure that everyone on the team is on the same page and that the chang
 
 - to download changes from remote repo
 
-  Algo:
+When you run _git pull_ without specifying a branch name while being on the _main_ branch, Git will pull changes from the remote branch that _main_ is tracking, which is typically _origin/main_.
+
+Algo:
 
 1. checkout to _master_ branch
 2. git pull
