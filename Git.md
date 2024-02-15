@@ -258,7 +258,9 @@ It helps ensure that everyone on the team is on the same page and that the chang
 
 - to download changes from remote repo
 
-When you run _git pull_ without specifying a branch name while being on the _main_ branch, Git will pull changes from the remote branch that _main_ is tracking, which is typically _origin/main_.
+When you run _git pull_ without specifying a branch name while being on the _main_ branch, Git will pull changes from the remote branch that _main_ is tracking, which is typically _origin/main_. To see the remote tracking branch use _git branch -vv_.
+
+For example, if you're currently working on the _develop_ branch locally, running _git pull_ will fetch changes from the corresponding branch _(develop)_ on the remote repository and merge them into your local _develop_ branch.
 
 Algo:
 
