@@ -77,6 +77,7 @@ cat ~/.gitconfig
 ## HEAD
 
 - it's a file that displays the last commit on the branch
+- also may refer to a current branch
 
 ### how to use
 
@@ -214,7 +215,7 @@ _~N_ - (N is a number). N is counted back from 0 (current commit).
 
 #### conflict
 
-A conflict is a situation in which one or more people have modified the same file. At the same time, the results of such modifications are incompatible and only a human can figure out which of the variants is correct.
+A conflict is a situation in which one or more people have modified the _same file_. At the same time, the results of such modifications are incompatible and only a human can figure out which of the variants is correct.
 
 In development, for example, conflicts most often arise when multiple programmers change code in the same place at the same time.
 
@@ -224,7 +225,7 @@ During merging, Git itself highlights files that it was unable to merge. To unde
 
 1. Look in the file where the conflict occurred.
 2. Examine both sides of the conflict - your version and your colleague's version. Your task is to correctly merge the two versions into a final version, so that the changes of both sides are not lost. The new version will become the current up-to-date version.
-3. Manually remove or tweak irrelevant changes, if any.
+3. _Manually_ remove or tweak irrelevant changes, if any.
 4. Prepare the changes for saving and commit.
 
 ### git push - send local branch to Github
@@ -269,11 +270,11 @@ Algo:
 
 #### best practice: algo before PR
 
-1. git checkout master - checkout to master
-2. git pull - pull new changes to master
-3. git checkout my-branch - checkout to your branch
-4. git merge master - merge main into my-branch
-5. git push -u origin my-branch - push my-branch into remote repo
+1. _git checkout master_ - checkout to master
+2. _git pull_ - pull new changes to master
+3. _git checkout my-branch_ - checkout to your branch
+4. _git merge master_ - merge main into my-branch
+5. _git push -u origin my-branch_ - push my-branch into remote repo
 
 #### feature branch workflow
 
