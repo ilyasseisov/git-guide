@@ -307,10 +307,41 @@ Run _git pull origin develop_ (assuming the main development branch is named _de
 5.1. merge branch into main
 5.2. delete branch
 
-6.1. delete branch locally
-6.2. git checkout main
-6.3. git pull
+6.1. git checkout main
+6.2. git pull
+6.3. delete branch locally
 
 ### Git commands visualization
 
 https://dev.to/lydiahallie/cs-visualized-useful-git-commands-37p1
+
+## Algo for solo projects
+
+Assuming we have _main_ branch as a primary.
+
+1. create new _feature_ or _fix_ branch
+2. work there and do commits
+   when finished
+3. checkout to _main_
+4. _git merge --no-ff --no-edit *feature*_
+5. delete _feature_ branch
+
+This is a good approach as it creates a merge commit.
+
+## Exit Vim
+
+Esc + Shift + zz
+
+## Situation: remote _origin/master_ branch was reverted back and you need to reflect those changes in the local repo
+
+1. _git pull_
+   This will pull changes, but the state of the local files will remain as it was. And git will offer to push changes.
+
+2. _git reset --hard origin/master_
+   This will set the state of local files as in remote repo.
+
+   or
+
+---
+
+1. _git pull --rebase_
